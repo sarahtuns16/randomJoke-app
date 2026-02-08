@@ -4,14 +4,12 @@ dotenv.config();
 import express from "express";
 const app = express();
 
-// Middleware to parse JSON
+// Middleware
 app.use(express.json());
 
 // Routes
-//app.use("/jokes",  import route here "./routes/jokesRoute");
-
 app.get("/", (req, res) => {
-    res.json({message: "Hello world, testing!!!"})
-})
+  res.render("jokesUI");
+});
 
 export default app;
