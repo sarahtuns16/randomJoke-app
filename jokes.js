@@ -17,7 +17,7 @@ const jokes = [
         {
             id: 4,
             joke: `During our cohort project, someone committed code at 2 AM. I asked why. He said, 'Na creativity hour, abeg leave me.'\u{1F605}`,
-            type: "long"
+            type: "short"
         },
         {
             id: 5,
