@@ -1,7 +1,8 @@
-const jokes = require('./jokes');
-const { getFilteredRandomJoke } = require('./filterLogic');
+import { jokes } from './jokes.js';
+import { getFilteredRandomJoke } from './filterLogic.js';
 
-console.log('SHORT JOKE:', getFilteredRandomJoke(jokes, 'short'));
-console.log('LONG JOKE:', getFilteredRandomJoke(jokes, 'long'));
-console.log('DEFAULT:', getFilteredRandomJoke(jokes));
-console.log('INVALID TYPE:', getFilteredRandomJoke(jokes, 'funny'));
+console.log( "--- Fetching Short Joke ---" );
+console.log(getFilteredRandomJoke(jokes, 'short'));
+
+console.log("\n--- Fetching Long Joke ---");
+console.log(getFilteredRandomJoke(jokes, 'long'));
