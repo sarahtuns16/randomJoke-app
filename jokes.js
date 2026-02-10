@@ -1,4 +1,4 @@
-const jokes = [
+export const rawJokes = [
     {
         id: 1,
         joke: "Why do Nigerian devs love Power Banks? Na because 'E no dey carry last'.",
@@ -151,4 +151,12 @@ const jokes = [
         },
 ];
 
-module.exports = jokes;
+const countWords = (text) => {
+    if (typeof text !== 'string') return 0;
+    return text.trim().split(/\s+/).length;
+};
+
+export const jokes = rawJokes.map(joke => ({
+    ...joke,
+    wordCount: countWords(joke.content)
+}));
